@@ -8,8 +8,9 @@ r10k_binary = '/usr/bin/r10k'
 r10k_module = 'puppetfile'
 
 env = os.environ
-if env.get('DISPLAY') and env.get('I_HATE_ANSI') != '1':
-    """ Allows you to disable color with export ANSI=1
+if env.get('DISPLAY') or env.get('SSH_CLIENT') or env.get('FORCE_ANSI'):
+    """ Enables ascii for invokation sources that support it.
+        You can force color support by exporting FORCE_ANSI with any value.
     """
     class ansi:
         """ ANSI colors """
