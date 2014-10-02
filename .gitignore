@@ -1,0 +1,6 @@
+*.pyc
+build
+dist
+rpms
+rpm-build
+r10kwrapper.egg-info
