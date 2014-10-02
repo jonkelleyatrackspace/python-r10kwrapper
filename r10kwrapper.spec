@@ -3,7 +3,7 @@
 %define module_name r10kwrapper
 
 Name:           %{module_name}
-Version:        0.1.0
+Version:        0.1.2
 Release:        1
 Summary:        r10kwrapper - A tool that does a bit of automation and management around the use of the r10k command.
 
@@ -34,5 +34,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0755,-,-) %{_bindir}/r10kwrapper
 
 %changelog
-* Oct 2 2014 Jonathan Kelley <jon.kelley@rackspace.com> - 0.1.0
+* Oct 2 2014 Jonathan Kelley <jon.kelley@rackspace.com> - 0.1.2
 - Initial spec
