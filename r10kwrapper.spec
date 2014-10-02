@@ -34,5 +34,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(0755,-,-) %{_bindir}/r10kwrapper
 
 %changelog
-* Oct 2 2014 Jonathan Kelley <jon.kelley@rackspace.com> - 0.1.2
+* Thu Oct 2 2014 Jonathan Kelley <jon.kelley@rackspace.com> - 0.1.2
 - Initial spec
