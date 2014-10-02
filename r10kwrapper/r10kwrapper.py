@@ -169,8 +169,8 @@ def parse_arguements():
 
     return r10k_batch_list, args.action, args.flags_append
 
-if __name__ == "__main__":
-    """ Run """
+def main():
+    """ Triggers everythingggg """
     r10k_action_batch, action, flags_append = parse_arguements()
 
     num_actions = str(len(r10k_action_batch))
@@ -190,3 +190,6 @@ if __name__ == "__main__":
             modules_directory=module_destination, 
             action=action,
             r10k_append_flags=flags_append)
+
+if __name__ == "__main__":
+    main()
