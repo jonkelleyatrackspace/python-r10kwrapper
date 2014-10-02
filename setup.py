@@ -13,7 +13,7 @@ if __name__ == "__main__":
         author = "Jon Kelley",
         author_email = "jon.kelley@rackspace.com",
         url = "https://github.com/jonkelleyatrackspace/r10kwrapper",
-        license = 'internal use',
+        license = 'The FreeBSD Copyright',
         packages = [NAME],
         package_dir = {NAME: NAME},
         description = "zabbixctl - Utility that connects to Zabbix API",
