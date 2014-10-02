@@ -80,7 +80,7 @@ def determine_path_load_method(puppetfile,module_destination,configsection):
     elif module_destination != None or puppetfile != None:
         return [(puppetfile,module_destination),]
 
-def retrieve_config_sections_from_disk(inifile='r10kwrapper.conf',sections=[]):
+def retrieve_config_sections_from_disk(inifile='/etc/r10k/wrapper.conf',sections=[]):
     """ Parses the inifile and returns the desired configuration sections.
     """
     config = ConfigParser.RawConfigParser()
