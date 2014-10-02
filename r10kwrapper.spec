@@ -29,7 +29,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__python} setup.py install --root $RPM_BUILD_ROOT
 
 %files
-%doc README.md
+#%doc README.md
 %{python_sitelib}/*
 %attr(0755,-,-) %{_bindir}/r10kwrapper
 
