@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     setup(
         name = NAME,
-        version = "0.1.0",
+        version = "0.1.1",
         author = "Jon Kelley",
         author_email = "jon.kelley@rackspace.com",
         url = "https://github.com/jonkelleyatrackspace/r10kwrapper",
@@ -18,10 +18,10 @@ if __name__ == "__main__":
         package_dir = {NAME: NAME},
         description = "zabbixctl - Utility that connects to Zabbix API",
 
-        install_requires = ['subprocess',
-                            'argparse',
-                            'logging',
-                            'ConfigParser'],
+        #install_requires = ['subprocess',
+        #                    'argparse',
+        #                    'logging',
+        #                    'ConfigParser'],
         entry_points={
             'console_scripts': [ 'r10kwrapper = r10kwrapper.r10kwrapper:main' ],
         }
