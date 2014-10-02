@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     setup(
         name = NAME,
-        version = "0.1.1",
+        version = "0.1.2",
         author = "Jon Kelley",
         author_email = "jon.kelley@rackspace.com",
         url = "https://github.com/jonkelleyatrackspace/r10kwrapper",
