@@ -78,7 +78,7 @@ def determine_path_load_method(puppetfile,module_destination,configsection):
     elif configsection != None:
         return retrieve_config_sections_from_disk(sections=configsection)
 
-    elif module_destination != None or puppetfile != None:
+    elif module_destination != None and puppetfile != None:
         return [(puppetfile,module_destination),]
 
 def retrieve_config_sections_from_disk(inifile=wrapper_conf,sections=[]):
