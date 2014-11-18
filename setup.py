@@ -9,19 +9,14 @@ if __name__ == "__main__":
 
     setup(
         name = NAME,
-        version = "0.1.2",
+        version = "0.1.3",
         author = "Jon Kelley",
         author_email = "jon.kelley@rackspace.com",
         url = "https://github.com/jonkelleyatrackspace/r10kwrapper",
         license = 'The FreeBSD Copyright',
         packages = [NAME],
         package_dir = {NAME: NAME},
-        description = "zabbixctl - Utility that connects to Zabbix API",
-
-        #install_requires = ['subprocess',
-        #                    'argparse',
-        #                    'logging',
-        #                    'ConfigParser'],
+        description = "r10kwrapper - a wrapper for r10k",
         entry_points={
             'console_scripts': [ 'r10kwrapper = r10kwrapper.r10kwrapper:main' ],
         }
