@@ -5,7 +5,8 @@ import logging, subprocess, ConfigParser, argparse, sys, os
 __author__  = 'Jonathan Kelley'
 
 wrapper_conf = '/etc/r10k/wrapper.ini'
-r10k_binary = '/usr/bin/r10k'
+
+r10k_binary = os.environ.get('R10K_BINARY','/usr/bin/r10k')
 r10k_module = 'puppetfile'
 
 env = os.environ
@@ -116,7 +117,8 @@ def execute_r10k(puppetfile=None,modules_directory=None,action="check",r10k_appe
             r10k_append_flags=r10k_append_flags)
 
     command = str(r10k_binary) + " " + str(r10k_module) + " " + str(action) + " " + str(r10k_append_flags)
-    env_vars = {'PUPPETFILE': puppetfile, 'PUPPETFILE_DIR': modules_directory}
+    env_vars = { 'PATH' : '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+                 'PUPPETFILE': puppetfile, 'PUPPETFILE_DIR': modules_directory}
 
     logging.debug(ansi.brown + "ENV_VARS: " + str(env_vars) + ansi.clear)
     logging.debug(ansi.brown + "SHELLEXEC: " + str(command) + ansi.clear)
@@ -127,7 +129,7 @@ def execute_r10k(puppetfile=None,modules_directory=None,action="check",r10k_appe
         "STDOUT: " + str(output) + ansi.clear)
 
     if process.returncode > 0:
-        logging.critical( ansi.red + appname + ': r10k execution failed.' + ansi.clear)
+        logging.critical( ansi.red + ': r10k execution failed.' + ansi.clear)
         sys.exit(1)
 
 def parse_arguements():
